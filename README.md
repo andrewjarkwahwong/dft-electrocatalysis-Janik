@@ -8,6 +8,6 @@ Tools are, not limited to, Jupyter notebooks, Google colab, and Google sheets fo
 All tools will have the attached paper for further readings about the theory and frameworks.
 
 Current tools are as follow:
-1. Electrochemical activation barrier calculator with Electrochemical double layer consideration
+1. Calculating Electrochemical activation barrier with electrode-electrolyte interfacial effects
 
 Feel free to contact me (Andrew) for questions or suggestions at ajwongphd@gmail.com or jaw6647@psu.edu.
