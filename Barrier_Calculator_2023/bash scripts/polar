@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Create the field directory
+mkdir field
+
+# Create subdirectories 0.1 to 0.6
+for i in {1..6}; do
+    mkdir field/0.$i
+done
+
+# Copy files to each subdirectory
+files=("CONTCAR" "KPOINTS" "INCAR" "POTCAR" "SLURM.VASP")
+for file in "${files[@]}"; do
+    for i in {1..6}; do
+        cp "$file" field/0.$i/
+    done
+done
+
+# Rename CONTCAR to POSCAR
+for i in {1..6}; do
+    mv field/0.$i/CONTCAR field/0.$i/POSCAR
+done
+
+# Modify INCAR in each subdirectory
+for i in {1..6}; do
+    echo "EFIELD = 0.$i" >> field/0.$i/INCAR
+    sed -i 's/NSW[[:space:]]*=[[:space:]]*[0-9]*/NSW = 0/' field/0.$i/INCAR
+    sed -i 's/IBRION[[:space:]]*=[[:space:]]*[0-9-]*/IBRION = -1/' field/0.$i/INCAR
+done
+
+# Submit each job
+for i in {1..6}; do
+    cd field/0.$i/
+    sbatch SLURM.VASP
+    cd ../..
+done
+

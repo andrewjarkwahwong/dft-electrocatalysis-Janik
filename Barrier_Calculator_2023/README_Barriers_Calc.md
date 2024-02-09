@@ -13,6 +13,7 @@ The main advantage of our approach is to quantify the sensitivity of DFT predict
 Excel Notebook: Excel_Barrier_EDL.xlsx
 Jupyter Notebook: Jupyter_Barriers_EDL.ipynb
 Python Scripts: Barrier_EDL_Base.py and Barrier_E_and_d.py
+Bash scripts: polar and getenergies
 
 --Inputs--
 
@@ -74,3 +75,24 @@ The script provided reproduces the main plots in the manuscript for calculating 
 2. Beta Calculator is calculated for Cation+ transfer (H+) from bulk to the surface. Thus, beta builds from 0 to 1 as the EDL effects and changes in dipole moment/polarizability become more significant (1 is where dipole moment changes, polarizability changes, and EDL is not significant). Simply change e = 0 if you are studying a reaction where H+ is not needed with the transfer of an electron. Beta will then decrease from 1 to 0 as the EDL effects and changes in dipole moment/polarizability become more significant. 
 3. Both the beta calculator and the sensitivity analysis ranges for the dielectric constant and the EDL width can be altered in the function. 
 4. The excel sheet is exported to the same folder. I plan to add a feature that it has the option to make entries in different sheets and such.
+
+
+## Bash Scripts
+
+### polar
+
+This is a simple script I made that sets up polarizability calculations for you given a directory with an optimized geometry. Simply, polar copys the VASP inputs (renames CONTCAR to POSCAR) and creates a directory called "field" where a set of singlepoint vasp calculations of efield from 0.1 to 0.6. These files are copied into each directory and the submission script is executed.
+A few notes:
+1. You need to change the submission script to match yours. Mine is called "SLURM.VASP". 
+2. Feel free to change the script and iterate through the desired range of efield values. I find generally 0 to 0.5 with the five additional single points should suffice in determining the parabola of energy change in an electric field.
+    a. I plan to create another script using gnuplot or python that can graph and process the value of the polarizability
+
+### getenergies
+
+This is a script generally nice to have when dealing with multiple VASP calculations in a directory. T
+his script is executed as "getenergies path", where the path is the directory (and subdirectories) of interest. It 1) checks if the VASP jobs in the subdirectory are converged and 2) if so, grep the energy from the OUTCAR. 
+
+## Additional tools
+
+### QVASP and VASPKIT
+For calculation the Workfunction (potential of zero charges), I recommend both QVASP and VASPKIT as they have an easy way to determine the WF ([Link here](https://sourceforge.net/projects/qvasp/)). If you want to analyze the xy average potenital w.r.t z of your surface, VASPKIT is built into QVASP and you can analyze this. 

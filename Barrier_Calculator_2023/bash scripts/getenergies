@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Check if a folder path is provided as an argument
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <folder_path>"
+    exit 1
+fi
+
+folder="$1"
+
+# Check if the provided path is a directory
+if [ ! -d "${folder}" ]; then
+    echo "Error: The specified path is not a directory."
+    exit 1
+fi
+
+for subdir in "${folder}"/*; do
+    if [ -d "${subdir}" ]; then
+        outcar_file="${subdir}/OUTCAR"
+        if [ -f "${outcar_file}" ]; then
+            last_energy_line=$(grep 'energy  without' "${outcar_file}" | tail -n 1)
+            if [ -n "$last_energy_line" ]; then
+                energy_value=$(echo "${last_energy_line}" | awk '{print $NF}')
+                echo "$(basename "${subdir}") converged ${energy_value}"
+            else
+                echo "$(basename "${subdir}") energy line not found"
+            fi
+        else
+            echo "$(basename "${subdir}") OUTCAR file not found"
+        fi
+    fi
+done
+
