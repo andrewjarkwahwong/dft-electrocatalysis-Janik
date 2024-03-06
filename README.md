@@ -8,9 +8,11 @@ All tools will have the attached paper for further readings about the theory and
 
 # Current tools and manuscripts are as follows:
 ## Calculating Electrochemical activation barrier and quantifying electrode-electrolyte interfacial effects
-    a. Our paper in Journal of Catalysis can be read here to learn more about the methodology. 
-## Quantifying the Symmetry Factor as a function of the EDL properties and the electronic properties. 
-    a. Currently in review at Nature Catalysis
+    a. [Our paper in Journal of Catalysis can be read here to learn more about the methodology.](https://www.sciencedirect.com/science/article/abs/pii/S0021951724000733) 
+## Sensitivity analysis of Electrochemical Double Layer (EDL) approximation on electrokinetic predictions: CO* Reduction on Cu
+    a. Currently in review at The Journal of Physical Chemistry C.
+## Quantifying the Symmetry Factor as a function of the EDL and electronic properties. 
+    a. Currently in review at Journal of the American Chemical Society.
 
 
 Feel free to contact me (Andrew) for questions or suggestions at ajwongphd@gmail.com or jaw6647@psu.edu.

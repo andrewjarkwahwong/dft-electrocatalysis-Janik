@@ -3,7 +3,7 @@
 # Background
 This part of the repository is to provide a tool to calculate potential dependent electrochemical activation barriers with electrochemical double layer (EDL) consideration using our analytical GC-DFT approach. I have provided several different tools within the repository and links based on your preference, where all tools compute similar sensitivity analysis.
 
-Please read: Our paper in Journal of Catalysis for more details on the theory and derivation of our approach. 
+Please read: [Our paper in Journal of Catalysis for more details on the theory and derivation of our approach](https://www.sciencedirect.com/science/article/abs/pii/S0021951724000733). 
 Usage of our approach requires citation of this work. 
 
 The main advantage of our approach is to quantify the sensitivity of DFT prediction activation barriers to different types of EDL models and their parameters. Note that our approach uses a simple Helmholtz model to address both the changes in workfunction along the reaction path and the description of the field (Eqs. 14, 20, and 21). In practice, any model of the EDL, capacitance, and the field can be used and rederived. With a Helmholtz model, we can quantify how different reaction energetics and activation barriers change with the dielectric constant and the EDL width w.r.t potential.
