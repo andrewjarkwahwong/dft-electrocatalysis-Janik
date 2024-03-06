@@ -1,5 +1,5 @@
 # Sensitivity analysis of Electrochemical Double Layer (EDL) approximation on electrokinetic predictions: CO* Reduction on Cu
-![alt text](Sensitivity_JPCC_2024\Example Images\TOC_Final.png)
+![image info](Sensitivity_JPCC_2024\Example Images\TOC_Final.png)
 # Background
 This repository uses the analytical Grand Canonical DFT (aGC-DFT) approach to elucidate the sensitivity of electrokinetic barriers based on assumed properties of the EDL. 
 Please read: [Our paper in Journal of Catalysis for more details on the theory and derivation of our aGC-DFT approach](https://www.sciencedirect.com/science/article/abs/pii/S0021951724000733). Usage of our approach requires citation of this work. 
