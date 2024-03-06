@@ -4,7 +4,7 @@
 The purpose of this repository is to provide tools derived from the models and DFT frameworks for modeling electrocatalytic reactions. 
 
 Tools are, not limited to, Jupyter notebooks, Python scripts, excel sheets, and bash scripts for ease of use.
-All tools will have the attached paper for further readings about the theory and frameworks.
+All tools will have the attached paper for further readings about the theory,frameworks, and applications.
 
 # Current tools and manuscripts are as follows:
 ## Calculating Electrochemical activation barrier and quantifying electrode-electrolyte interfacial effects
