@@ -1,5 +1,5 @@
 # Analytical Grand-Canonical DFT Approach for the Calculation of Potential-Dependent Electrochemical Activation Energies
-![title](Images/Ga_Stack.png)
+![image info](Images/Ga_Stack.png)
 # Background
 This part of the repository is to provide a tool to calculate potential dependent electrochemical activation barriers with electrochemical double layer (EDL) consideration using our analytical GC-DFT approach. I have provided several different tools within the repository and links based on your preference, where all tools compute similar sensitivity analysis.
 

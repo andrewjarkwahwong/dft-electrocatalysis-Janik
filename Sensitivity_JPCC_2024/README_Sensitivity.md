@@ -29,29 +29,29 @@ Examples and a few notes are shown below for each figure.
 ![alt text](Images/image-2.png)
 
 Notes: 
-    a. You need to specify the dielectric constant and Helmholtz width for each reaction 
-        M_values = {'C-H': {'er': 78.4, 'd': 3}, 'O-H': {'er': 78.4, 'd': 3}, 'OC-CO': {'er': 78.4, 'd': 3}}
-    a. You need to desired potentials to analyze (The script is set up for analyzing two potentials but of course you can analyze the whole potential range of u)
-        volts=[-0.5,-0.75] 
+1. You need to specify the dielectric constant and Helmholtz width for each reaction
+    M_values = {'C-H': {'er': 78.4, 'd': 3}, 'O-H': {'er': 78.4, 'd': 3}, 'OC-CO': {'er': 78.4, 'd': 3}}
+2. You need to desired potentials to analyze (The script is set up for analyzing two potentials but of course you can analyze the whole potential range of u)
+    volts=[-0.5,-0.75] 
 
 ### 2. Sensitivity of barriers based on EDL properties
 ![alt text](Images/image-1.png)
 Notes: 
-    a. You need to specify the dielectric constant and Helmholtz width for each reaction as two lists. It can take as many values as you want (thought the plot may get messy)
-        er = [1,2,4,8,13,78.4] #Relative permittivity (Dielectric Constant)
-        d = [3,4.5,6,10] #Helmholtz EDL Width in Angstrom
-    b. Currently, the color palette is set where the darker lines indicate larger dielectric constants. This may need to be adjusted, specifically n_colors.
-    c. The linestyle changes based on different values of d. This will need to be adjusted if you choose different values. 
+1. You need to specify the dielectric constant and Helmholtz width for each reaction as two lists. It can take as many values as you want (thought the plot may get messy)
+    er = [1,2,4,8,13,78.4] #Relative permittivity (Dielectric Constant)
+    d = [3,4.5,6,10] #Helmholtz EDL Width in Angstrom
+2. Currently, the color palette is set where the darker lines indicate larger dielectric constants. This may need to be adjusted, specifically n_colors.
+3. The linestyle changes based on different values of d. This will need to be adjusted if you choose different values. 
 
 
 ### 3. Sensitivity of symmetry factors based on EDL Properties
 ![alt text](Images/image.png)
 
 Notes: 
-    a. This part of the cell is set up to plot the symmetry factor of a specified reaction based on "desired_M_index"
-        desired_M_index = 1  # Change this to the desired index of M where index 1 is O-H
-    b. The order of the dielectric constant can be adjusted,which uses the same math as Sensitivity of barriers based on EDL Properties 
-        custom_order = [78.4, 13, 8, 4, 2.0, 1.0]  # Replace with your desired order
+1. This part of the cell is set up to plot the symmetry factor of a specified reaction based on "desired_M_index"
+    desired_M_index = 1  # Change this to the desired index of M where index 1 is O-H
+2. The order of the dielectric constant can be adjusted,which uses the same math as Sensitivity of barriers based on EDL Properties 
+    custom_order = [78.4, 13, 8, 4, 2.0, 1.0]  # Replace with your desired order
 
 
 ## QVASP and VASPKIT
