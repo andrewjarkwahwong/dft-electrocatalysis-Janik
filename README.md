@@ -14,6 +14,7 @@ All tools will have the attached paper for further readings about the theory,fra
 ## Quantifying the Symmetry Factor as a function of the EDL and electronic properties. 
     a. Currently in review at Journal of the American Chemical Society.
 
+Each section of the repo has a readme.MD to further explain the details of the tools available. 
 
 Feel free to contact me (Andrew) for questions or suggestions at ajwongphd@gmail.com or jaw6647@psu.edu.
 You can also contact Dr. Janik at mjj13@psu.edu for any details as well. 

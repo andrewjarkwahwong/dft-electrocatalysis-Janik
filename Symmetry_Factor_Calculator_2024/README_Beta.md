@@ -29,7 +29,7 @@ I use the area and U$_{pzc}$ of a Au(111) surface. An common and arbitrary value
 
 ### Dielectric Constant and EDL Width
 Here we can see how $\beta$ varies for different EDL widths and dielectric constants. Different EDL widths and $\epsilon$$_r$ are required for $\beta$$_{DFT}$ = 0.5. The $\beta$ is highly sensitive to the chosen value of the EDL width. 
-![alt text](image-2.png)
+![alt text](Symmetry_Factor_Calculator_2024\image-2.png)
 
 Notes:
 1. e_r is a list of dielectric constants that can be studied.
@@ -42,11 +42,11 @@ Notes:
 
 ### Dipole Moment Change
 The magnitude of the dipole moment change is one of the most signficant variables on affecting the profile of the $\beta$.
-![alt text](image-3.png)
+![alt text](Symmetry_Factor_Calculator_2024\image-3.png)
 
 ### Polarizability Change 
 The magnitude of the polarizability change affects the profile of the $\beta$.
-![alt text](image-4.png)
+![alt text](Symmetry_Factor_Calculator_2024\image-4.png)
 
 # License
 
