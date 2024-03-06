@@ -1,5 +1,5 @@
 # Sensitivity analysis of Electrochemical Double Layer (EDL) approximation on electrokinetic predictions: CO* Reduction on Cu
-![image info](Sensitivity_JPCC_2024\Example Images\TOC_Final.png)
+![image info](Images/TOC_Final.png)
 # Background
 This repository uses the analytical Grand Canonical DFT (aGC-DFT) approach to elucidate the sensitivity of electrokinetic barriers based on assumed properties of the EDL. 
 Please read: [Our paper in Journal of Catalysis for more details on the theory and derivation of our aGC-DFT approach](https://www.sciencedirect.com/science/article/abs/pii/S0021951724000733). Usage of our approach requires citation of this work. 
@@ -26,7 +26,7 @@ Using the Excel Template, this code will provide 3 figures based on the analytic
 Examples and a few notes are shown below for each figure.
 
 ### 1. Compartmentalization of potential-dependent contribution on the barrier
-![alt text](Sensitivity_JPCC_2024\Example Images\image-2.png)
+![alt text](Images/image-2.png)
 
 Notes: 
     a. You need to specify the dielectric constant and Helmholtz width for each reaction 
@@ -35,7 +35,7 @@ Notes:
         volts=[-0.5,-0.75] 
 
 ### 2. Sensitivity of barriers based on EDL properties
-![alt text](Sensitivity_JPCC_2024\Example Images\image-1.png)
+![alt text](Images/image-1.png)
 Notes: 
     a. You need to specify the dielectric constant and Helmholtz width for each reaction as two lists. It can take as many values as you want (thought the plot may get messy)
         er = [1,2,4,8,13,78.4] #Relative permittivity (Dielectric Constant)
@@ -45,7 +45,7 @@ Notes:
 
 
 ### 3. Sensitivity of symmetry factors based on EDL Properties
-![alt text](Sensitivity_JPCC_2024\Example Images\image.png)
+![alt text](Images/image.png)
 
 Notes: 
     a. This part of the cell is set up to plot the symmetry factor of a specified reaction based on "desired_M_index"
