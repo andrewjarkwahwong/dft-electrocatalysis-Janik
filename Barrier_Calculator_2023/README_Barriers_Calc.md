@@ -1,7 +1,7 @@
 # Analytical Grand-Canonical DFT Approach for the Calculation of Potential-Dependent Electrochemical Activation Energies
 ![image info](Images/Ga_Stack.png)
 # Background
-This part of the repository is to provide a tool to calculate potential dependent electrochemical activation barriers with electrochemical double layer (EDL) consideration using our analytical GC-DFT approach. I have provided several different tools within the repository and links based on your preference, where all tools compute similar sensitivity analysis.
+This part of the repository is to provide a tool to calculate potential-dependent electrochemical activation barriers with electrochemical double layer (EDL) consideration using our analytical GC-DFT approach. I have provided several different tools within the repository and links based on your preference, where all tools compute similar sensitivity analysis.
 
 Please read: [Our paper in Journal of Catalysis for more details on the theory and derivation of our approach](https://www.sciencedirect.com/science/article/abs/pii/S0021951724000733). 
 Usage of our approach requires citation of this work. 
@@ -10,23 +10,23 @@ The main advantage of our approach is to quantify the sensitivity of DFT predict
 
 
 # Available Tools 
+Python Scripts: Barrier_EDL_Base.py 
 Excel Notebook: Excel_Barrier_EDL.xlsx
 Jupyter Notebook: Jupyter_Barriers_EDL.ipynb
-Python Scripts: Barrier_EDL_Base.py and Barrier_E_and_d.py
 Bash scripts: polar and getenergies
 
---Inputs--
+--General Inputs--
 
 Initial/Final States:
-1. DFT Free Energies: Output of DFT energies with corrections (ex: ZPVE, TS) to Free Energies. Note that the reference state and initial state are important to choose. Generally, we use bare surface + $\frac{1}{2}$ H $_2$ and reference to this potential or the H* on the surface and reference to the equilibrium potential of this state. 
-2. Dipole Moment: Dipole Moments calculated from VASP (IDIPOL =3, LDIPOL = .TRUE.) for initial and final states. Both should be turned on. I also would test whether
-3. Polarizability: Refer to Supplemental Section 3 of how to calculate the polarizability of the surface and the adsorbate
+1. DFT Free Energies: Output of DFT energies with corrections (ex: ZPVE, TS) to Free Energies. Note that the reference state and initial state are important to choose. Generally for proton-electron transfer, we use bare surface + $\frac{1}{2}$ H $_2$ and reference to this potential or the H* on the surface and reference to the equilibrium potential of this state. (eV)
+2. Dipole Moment: Dipole Moments calculated from VASP (IDIPOL =3, LDIPOL = .TRUE.) for initial and final states. Turning LDIPOL on or off affects the magnitude. Units are e$\AA$
+3. Polarizability: Refer to Supplemental Section 3 of how to calculate the polarizability of the surface and the adsorbate. The script corrects for the polarizability to calculate only the polarizability change of the adsorbate, not the metal.  Units are e$\AA$$^2$V$^-1$
 
 Cell Parameters:
-4. Volume: Volume of the bare surface slab (ase gui can provide this quickly via quick info)
-5. Height: Total height of the surface slab
-6. Fermi Energy: Fermi Energy of the bare surface slab
-7. Vacuum Potential: Vacuum Potential determined from either the WAVECAR or CHGCAR (LVHAR=.TRUE.)
+4. Volume: Volume of the bare surface slab (ase gui can provide this quickly via quick info) ($\AA$$^3$)
+5. Height: Total height of the surface slab ($\AA$)
+6. Fermi Energy: Fermi Energy of the bare surface slab. (eV)
+7. Vacuum Potential: Vacuum Potential determined from either the WAVECAR or CHGCAR (LVHAR=.TRUE.) (V-abs)
 8. Bare Metal Polarizability: Polarizability of the bare metal slab with no adsorbate (Same procedure as Input #3)
 
 Potential Range:
@@ -35,9 +35,42 @@ Potential Range:
 
 EDL Model Parameters:
 11. Relative Permittivity: Dielectric Constant of the media within the interface ($\epsilon$ $_r$ = 1 for vacuum or $\epsilon$ $_r$ = 78.4 for bulk water)
-12. Width of the EDL: Width is defined as the distance between the electrode surface and the countercharge ions in angstrom 
-13. Vacuum to NHE: The voltage correction from absolute scale to NHE scale (commonly as 4.2 V to 4.8 V but test for your system)
-14. Solvation Free Energy Change (eV): This term incorporates the total solvation free energy change along the reaction path. Our approach does not include solvation (micro-solvation was included in our work to model H+ shuttling)
+12. Width of the EDL: Width is defined as the distance between the electrode surface and the countercharge ions in angstrom ($\AA$)
+13. Vacuum to NHE: The voltage correction from absolute scale to NHE scale (commonly as 4.2 V to 4.8 V but test for your system) 
+14. Solvation Free Energy Change: This term incorporates the long-range solvation free energy change along the reaction path. Our approach does not include solvation (micro-solvation was included in our work to model H+ shuttling). This term is described as $\Delta$$\Delta$G in units of eV
+
+## Python Notebook: Barrier_EDL_Base.py
+This script will compute three figures:
+1) Profile of free energy change w.r.t potential for model 1b, 2a,2b, and 2c
+2) Decompartmentalization of potential-dependent EDL effects 
+3) Total potential-dependent EDL effects 
+
+Note:
+1. Cell one is where you define all inputs. The rest of the code may need adjusting of axis given your system for the plots but the general framework should run smoothly. 
+
+### Effects of EDL model on $\Delta$G vs Applied Potential
+
+Here is a sample plot of the free energy change w.r.t the applied potential.
+![image info](Images/barriers.png)
+
+I have listed all electronic and EDL properties on the right. The four regression lines are how $\Delta$G changes w.r.t potential given as the complexities of the EDL model increases (model 1B, 2A, 2B,and 2C). You can see how the symmetry factor also changes with the incorporation of each complexity from the coefficient of the potential-dependent terms. 
+
+### Decompartmentalization of potential-dependent EDL effects 
+
+Using model 2C, we can plot how each of the three EDL complexities (capacitive, dipole-field, and induced dipole-field) change w.r.t potential.
+
+Here is a sample plot of the free energy change w.r.t the applied potential.
+![image info](Images/compartmentalize.png)
+
+The x axis is now plotted versus U-U$_{pzc}$ to quantifies these potential-dependent complexities.
+
+### Total potential-dependent EDL effects
+
+Using model 2C, we can quantify the total EDL effects w.r.t potential as shown below. 
+
+![image info](Images/totalEDL.png)
+
+The x axis is againplotted versus U-U$_{pzc}$ to quantifies these potential-dependent complexities.
 
 
 ## Excel Notebook: Excel_Barrier_EDL.xlsx

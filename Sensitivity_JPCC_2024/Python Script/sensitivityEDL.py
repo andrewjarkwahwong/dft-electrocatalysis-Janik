@@ -192,7 +192,7 @@ for i in range(len(M)):
 # %% Figure 3: Compartmentalization (The Plot)
 
 #USER INPUT: Change Voltage Here
-volts=[-0.5,-0.75] 
+volts=[-0.25,-0.5] 
 
 
 #Run the cell and generate the plot
@@ -241,8 +241,8 @@ for i in range(len(M_values)):
         bar2 = ax.bar(index[i]+ bar_width, c_total_values_1[i], bar_width,  bottom=g_1a_values_1[i], color=colors[3], alpha=0.5)
         bar3 = ax.bar(index[i]+ bar_width, dm_total_values_1[i], bar_width,  bottom=g_1a_values_1[i] + c_total_values_1[i], color=colors[0], alpha=0.5)
         bar4 = ax.bar(index[i]+ bar_width, p_total_values_1[i], bar_width,  bottom=g_1a_values_1[i] + c_total_values_1[i] + dm_total_values_1[i], color=colors[6], alpha=0.5)
-        ax.text(index[i]-0.5+ bar_width,g_1a_values_1[i] + c_total_values_1[i] + dm_total_values_1[i]+0.25,'-0.5 V',fontsize=36,fontweight='bold')
-        ax.text(index[i]+0.225,g_1a_values_2[i] + c_total_values_2[i] + dm_total_values_2[i]-0.1,'-0.25 V',fontsize=36,fontweight='bold')
+        ax.text(index[i]-0.5+ bar_width,g_1a_values_1[i] + c_total_values_1[i] + dm_total_values_1[i]+0.25,str(volts[1])+' V',fontsize=36,fontweight='bold')
+        ax.text(index[i]+0.225,g_1a_values_2[i] + c_total_values_2[i] + dm_total_values_2[i]-0.1,str(volts[0])+' V',fontsize=36,fontweight='bold')
         # Bars for Index 7 (shifted by bar width)
         bar2_2 = ax.bar(index[i], c_total_values_2[i], bar_width, bottom=g_1a_values_2[i], color=colors[3],label='Capacitive', alpha=1)
         bar3_2 = ax.bar(index[i], dm_total_values_2[i], bar_width,  bottom=g_1a_values_2[i] + c_total_values_2[i], color=colors[0],label='Dipole-Field', alpha=1)
@@ -252,8 +252,8 @@ for i in range(len(M_values)):
         bar2 = ax.bar(index[i]+ bar_width, c_total_values_1[i], bar_width, bottom=u_prime_1[i], color=colors[3], alpha=0.5)
         bar3 = ax.bar(index[i]+ bar_width, dm_total_values_1[i], bar_width, bottom=u_prime_1[i] + c_total_values_1[i], color=colors[0], alpha=0.5)
         bar4 = ax.bar(index[i]+ bar_width, p_total_values_1[i], bar_width, bottom=u_prime_1[i] + c_total_values_1[i] + dm_total_values_1[i], color=colors[6], alpha=0.5)
-        ax.text(index[i]-0.5+ bar_width,g_1a_values_1[0]+0.1,'-0.5 V',fontsize=36,fontweight='bold')
-        ax.text(index[i]+0.225,g_1a_values_1[0]+0.1,'-0.25 V',fontsize=36,fontweight='bold')
+        ax.text(index[i]-0.5+ bar_width,g_1a_values_1[0]+0.1,str(volts[1])+' V',fontsize=36,fontweight='bold')
+        ax.text(index[i]+0.225,g_1a_values_1[0]+0.1,str(volts[0])+' V',fontsize=36,fontweight='bold')
         # Bars for Index 7 (shifted by bar width)
         bar2_2 = ax.bar(index[i], c_total_values_2[i], bar_width, bottom=u_prime_2[i], color=colors[3], alpha=1)
         bar3_2 = ax.bar(index[i], dm_total_values_2[i], bar_width, bottom=u_prime_2[i] + c_total_values_2[i], color=colors[0], alpha=1)
@@ -262,8 +262,8 @@ for i in range(len(M_values)):
         bar2 = ax.bar(index[i]+ bar_width, c_total_values_1[i], bar_width, color=colors[3], alpha=0.5)
         bar3 = ax.bar(index[i]+ bar_width, dm_total_values_1[i], bar_width, bottom=c_total_values_1[i], color=colors[0], alpha=0.5)
         bar4 = ax.bar(index[i]+ bar_width, p_total_values_1[i], bar_width, bottom=c_total_values_1[i] + dm_total_values_1[i], color=colors[6], alpha=0.5)
-        ax.text(index[i]-0.5+ bar_width,g_1a_values_1[2]+0.1,'-0.5 V',fontsize=36,fontweight='bold')
-        ax.text(index[i]+0.225,g_1a_values_1[2]+0.1,'-0.25 V',fontsize=36,fontweight='bold')
+        ax.text(index[i]-0.5+ bar_width,g_1a_values_1[2]+0.1,str(volts[1])+' V',fontsize=36,fontweight='bold')
+        ax.text(index[i]+0.225,g_1a_values_1[2]+0.1,str(volts[0])+' V',fontsize=36,fontweight='bold')
         # Bars for Index 7 (shifted by bar width)
         bar2_2 = ax.bar(index[i], c_total_values_2[i], bar_width, color=colors[3], alpha=1)
         bar3_2 = ax.bar(index[i], dm_total_values_2[i], bar_width, bottom=c_total_values_2[i], color=colors[0], alpha=1)
