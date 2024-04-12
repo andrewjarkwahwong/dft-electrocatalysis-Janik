@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH -J COonCu       
+#SBATCH -o Output__.o%j
+#SBATCH --ntasks-per-node=16
+#SBATCH -p RM-shared
+#SBATCH -t 48:00:00
+#SBATCH -A chm200006p
+#SBATCH --mail-type BEGIN
+#SBATCH --mail-type END
+#SBATCH --mail-user jaw6647@psu.edu
+
+ulimit -s unlimited
+
+module load intel/20.4 intelmpi/20.4-intel20.4
+
+mpirun /ocean/projects/chm200006p/shared/VASP/vasp_std
