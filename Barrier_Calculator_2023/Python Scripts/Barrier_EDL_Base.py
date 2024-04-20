@@ -23,7 +23,10 @@ import seaborn as sns
 #%% Inputs 
 
 # Initial State Ex: Gas phase + Bare Surface
-e_in = -290.99#Energy of Initial State (eV)
+e_H2 = -6.62 # Energy of H2(g) (eV)
+e_noH = -284.37 #Energy of Initial state (No H*) (eV)
+
+e_in = e_noH + e_H2 #Energy of Initial State + H2 (g) (eV)
 dm_in = -0.03 #Dipole moment of Initial state (eA)
 polar_in_un = 4.65 #Polarizability of the initial state (eA^2V^-1)
 polar_bare = 3.08 #Polarizability of the bare metal (eA^2V^-1)
