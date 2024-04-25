@@ -70,8 +70,49 @@ Using model 2C, we can quantify the total EDL effects w.r.t potential as shown b
 
 ![image info](Images/totalEDL.png)
 
-The x axis is againplotted versus U-U$_{pzc}$ to quantifies these potential-dependent complexities.
+The x axis is again plotted versus U-U$_{pzc}$ to quantifies these potential-dependent complexities.
 
+## Python Notebook: Barrier_e_d.py + aGCDFT_ed.xlsx
+This script will compute three figures for different values of dielectric constants and d:
+1) Profile of free energy change w.r.t potential for model 1b, 2a,2b, and 2c (same as Barrier_EDL_Base.py)
+2) Quantified sensitvity of activation energies w.r.t a set of dielectric constants and distances
+3) Decompartmentalization of potential-dependent EDL effects for a given set of dielectric constants and distances
+
+The main difference between Barrier_e_d.py and Barrier_EDL_Base.py is the following:
+1) This script utilizes "pandas" to retrieve the inputs from an organized excel sheet (aGCDFT_ed.xlsx). 
+    This is beneficial as you can have larger sets of data organized in the excel sheet and it is easier to change from system to system (change sheetname, row, indices, etc).
+2) You can now enter a set of dielectric constants and distances as a list (er and d) and easily test the sensitivity of the activation barrier for a given reaction path.
+
+
+### Effects of EDL model on $\Delta$G vs Applied Potential
+The first figure regarding compartmentalization of EDL effects on barriers is the same as Barrier_EDL_Base.py.
+Note: If you specify multiple dielectric constants and d, this will plot every single activation energy for each dielectric and d. I recommend either using one er and d or specific the list of values you want based on the stored dictionary. 
+
+### Quantified sensitvity of activation energies w.r.t a set of dielectric constants and distances
+
+This is one of the most powerful tools in this script. These two Figures showing how the dielectric constant and the distance affects the barrier for NH* reduction on Rh(111) surface.
+
+![image info](Images/Fig2ed_er.png)
+
+![image info](Images/Fig4ed_d.png)
+
+Here we can quantify how much the barrier varies if different dielectric constants and Helmholtz EDL widths are used.
+
+### Decompartmentalization of potential-dependent EDL effects for a given set of dielectric constants and distances
+
+Here we can decompartmentalize the components of the total activation barrier into the following four potential-dependent components:
+1) Faradaic electron transfer
+2) Capacitive 
+3) Dipole-Field
+4) Induced Dipole-Field
+
+Here are two Figures for how the physical components of the electrification for varying dielectric constant and width. 
+
+![image info](Images/Fig3ed_er.png)
+
+![image info](Images/Fig5ed_d.png)
+
+Here we can quantify how much each physical component of the EDL varies if different dielectric constants and Helmholtz EDL widths are used.
 
 ## Excel Notebook: Excel_Barrier_EDL.xlsx
 The script provided reproduces the main plots in the manuscript for calculating the activation barrier of NH* to NH $_2$ * with 2 H $_2$ O molecules. 
