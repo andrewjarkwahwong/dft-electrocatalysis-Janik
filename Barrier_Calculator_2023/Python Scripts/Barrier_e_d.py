@@ -40,7 +40,7 @@ u_pzc = df['upzc'].tolist() #Potential of zero charge of the bare metal surface.
 # Initial State
 e_ref = df['G_In'].tolist() #Energy of Reference State (ex: adsorbate without H*) (eV)
 e_H2 = df['G_H2'].tolist() #Energy of H2 gas (eV)
-e_in = [i + y for i,y in zip(e_ref,e_H2)] # Energy of Initial State (eV)
+e_in = [i + 0.5*y for i,y in zip(e_ref,e_H2)] # Energy of Initial State (eV)
 
 dm_in = df['DM_In'].tolist()  #Dipole moment of Initial state (eA)
 polar_in_un = df['Polar_In'].tolist() #Polarizability of the reference state (eA^2V-1)
