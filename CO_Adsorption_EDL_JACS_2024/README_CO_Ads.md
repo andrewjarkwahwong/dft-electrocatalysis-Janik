@@ -25,7 +25,7 @@ This script extract data from an excel sheet to create the following plots:
 2. Potential-independent raw adsorption energies of CO*
 3. Compartmentalization of each EDL effect term across different models
 4. Sensitivity of free energy change w.r.t potential for a range of EDL properties
-5. Main text figure: Potential-dependent CO* adsorption acorss different EDL and adsorption path models
+5. Main text figure: Potential-dependent CO* adsorption across different EDL and adsorption path models
 
 Examples and a few notes are shown below for each figure.
 
@@ -68,7 +68,7 @@ Notes:
 
 
 
-### 5. Main text figure: Potential-dependent CO* adsorption acorss different EDL and adsorption path models
+### 5. Main text figure: Potential-dependent CO* adsorption across different EDL and adsorption path models
 ![alt text](Figures/5_main.png)
 
 Notes: 
