@@ -30,7 +30,7 @@ This script extract data from an excel sheet to create the following plots:
 Examples and a few notes are shown below for each figure.
 
 ### 1. Potential-dependent energy change w.r.t one set of EDL properties: dielectric constant and EDL width
-![alt text](Figures\1_er_d.png)
+![alt text](Figures/1_er_d.png)
 
 Notes: 
 1. You need to specify the dielectric constant and Helmholtz width for each reaction
@@ -42,13 +42,13 @@ Notes:
     volts=[-1.5,1] 
 
 ### 2. Potential-independent raw adsorption energies of CO*
-![alt text](Figures\2_gas.png)
+![alt text](Figures/2_gas.png)
 Notes: 
 1. This is essentially the gas-phase adsorption energies.
 
 
 ### 3. Compartmentalization of each EDL effect term across different models
-![alt text](Figures\3_compartmental.png)
+![alt text](Figures/3_compartmental.png)
 
 Notes: 
 1. Each row corresponds to the three adsorption models of CO*.
@@ -56,7 +56,7 @@ Notes:
 
 
 ### 4. Sensitivity of free energy change w.r.t potential for a range of EDL properties
-![alt text](Figures\4_sensitivity.png)
+![alt text](Figures/4_sensitivity.png)
 
 Notes: 
 1. This part of the cell is set up to plot the symmetry factor of a specified reaction based on "M_to_plot"
@@ -69,7 +69,7 @@ Notes:
 
 
 ### 5. Main text figure: Potential-dependent CO* adsorption acorss different EDL and adsorption path models
-![alt text](Figures\5_main.png)
+![alt text](Figures/5_main.png)
 
 Notes: 
 1. Basically the same as Figure 1 but Specify the combinations of er_val and d_val for each M_val
