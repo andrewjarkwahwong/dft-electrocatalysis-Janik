@@ -1,4 +1,4 @@
-# Potential-dependence of CO* adsorption on Au due to the EDL properties and rxn path model
+# Potential-dependence of CO* adsorption on Au: Sensitivity due to EDL properties and adsorption model
 
 # Background
 This repository uses the analytical Grand Canonical DFT (aGC-DFT) approach to elucidate the sensitivity of electrokinetic barriers based on assumed properties of the EDL. 
