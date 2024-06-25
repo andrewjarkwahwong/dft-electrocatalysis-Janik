@@ -12,6 +12,8 @@ Please read: Our paper in Journal of the American Chemical Society for applicati
 
 Note that our approach uses a simple Helmholtz model to address both the changes in workfunction along the reaction path and the description of the field. In practice, any model of the EDL, capacitance, and the field can be used and rederived. With a simple Helmholtz model, we can easily quantify how different $\beta$, reaction energetics, and activation barriers change with the dielectric constant and the EDL width w.r.t potential.
 
+The paper regarding tihs work is still in review at Angewandte Chemie. Will post once it is published. 
+
 # Available Files 
 Python Scripts: beta_calculator.py
 
