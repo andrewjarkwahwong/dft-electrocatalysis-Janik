@@ -19,6 +19,7 @@ Currently in review at Journal of the American Chemical Society.
 ## Quantifying the Symmetry Factor as a function of the EDL and electronic properties
 Currently in review at Angewandte Chemie.
 
+# Additional Information
 Each section of the repo has a readme.MD to further explain the details of the tools available. 
 
 Feel free to contact me (Andrew) for questions or suggestions at ajwongphd@gmail.com or jaw6647@psu.edu.
