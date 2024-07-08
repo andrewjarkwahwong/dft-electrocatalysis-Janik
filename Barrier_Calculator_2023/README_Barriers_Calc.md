@@ -62,7 +62,7 @@ Using model 2C, we can plot how each of the three EDL complexities (capacitive, 
 Here is a sample plot of the free energy change w.r.t the applied potential.
 ![image info](Images/compartmentalize.png)
 
-The x axis is now plotted versus U-U$_{pzc}$ to quantifies these potential-dependent complexities.
+The x axis is now plotted versus U-Upzc to quantifies these potential-dependent complexities.
 
 ### Total potential-dependent EDL effects
 
@@ -70,7 +70,7 @@ Using model 2C, we can quantify the total EDL effects w.r.t potential as shown b
 
 ![image info](Images/totalEDL.png)
 
-The x axis is again plotted versus U-U$_{pzc}$ to quantifies these potential-dependent complexities.
+The x axis is again plotted versus U-Upzc to quantifies these potential-dependent complexities.
 
 ## Python Notebook: Barrier_e_d.py + aGCDFT_ed.xlsx
 This script will compute three figures for different values of dielectric constants and d:
@@ -118,7 +118,7 @@ Here we can quantify how much each physical component of the EDL varies if diffe
 The script provided reproduces the main plots in the manuscript for calculating the activation barrier of NH* to NH $_2$ * with 2 H $_2$ O molecules. 
 
 --Current Capabilities--
-1. Quantification of U $_{pzc}$ of each state along the reaction path using the calculated capacitance of the Helmholtz model
+1. Quantification of Upzc of each state along the reaction path using the calculated capacitance of the Helmholtz model
 2. Compartmentalized both the potential-dependent and independent EDL term in Figure 3 w.r.t selected $\epsilon_r$ and d. These are quantified for each EDL correction w.r.t potential. 
 3. Calculates the sensitivity of the activation barrier w.r.t to potential for different presumed values of $\beta$ using model 1b (Figure 4)
 4. Compute the finite cell and explicit electrification terms given the $\epsilon_r$ and d (Figure 5)
@@ -130,7 +130,7 @@ The script provided reproduces the main plots in the manuscript for calculating 
 1. Shaded Blue are the inputs in the excel sheet. 
 2. Work function is calculated as eU $_{vacuum}$ - E $_{fermi}$
 3. Barriers are calculated using the polarizability w.r.t bare metal, using the polarizability change of only the adsorbate along the rxn path.
-4. PZC of each state is quantified to show how important it is to consider correcting the workfunction shifts (U $_{pzc}$) along the reaction path.
+4. PZC of each state is quantified to show how important it is to consider correcting the workfunction shifts (Upzc) along the reaction path.
 5. Note the slope and $\beta$ in model 2c is potential-dependent. An effective $\beta$ can be calculated by averaging the $\beta$ over a potential range of interest
 
 
