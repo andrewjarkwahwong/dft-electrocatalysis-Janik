@@ -1,4 +1,4 @@
-# dft-electrocatalysis-Janik
+# dft-electrocatalysis-Janik: Repository of Electrocatalysis Modeling Tools
  Tools supporting recent DFT electrocatalytic work in the Dr. Mike Janik group
 
 The purpose of this repository is to provide tools derived from the models and DFT frameworks for modeling electrocatalytic reactions. 
@@ -19,6 +19,7 @@ Currently in review at Journal of the American Chemical Society.
 ## Quantifying the Symmetry Factor as a function of the EDL and electronic properties
 Currently in review at Angewandte Chemie.
 
+# Additional Information
 Each section of the repo has a readme.MD to further explain the details of the tools available. 
 
 Feel free to contact me (Andrew) for questions or suggestions at ajwongphd@gmail.com or jaw6647@psu.edu.
