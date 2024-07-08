@@ -18,7 +18,7 @@ The main advantage of our approach is to quantify the sensitivity of DFT predict
 --General Inputs--
 
 Initial/Final States:
-1. DFT Free Energies: Output of DFT energies with corrections (ex: ZPVE, TS) to Free Energies. Note that the reference state and initial state are important to choose. Generally for proton-electron transfer, we use bare surface + $\frac{1}{2}$ H $_2$ and reference to this potential or the H* on the surface and reference to the equilibrium potential of this state. (eV)
+1. DFT Free Energies: Output of DFT energies with corrections (ex: ZPVE, entropic) to Free Energies. Note that the reference state and initial state are important to choose. Generally for proton-electron transfer, we use bare surface + $\frac{1}{2}$ H $_2$ and reference to this potential or the H* on the surface and reference to the equilibrium potential of this state. (eV)
 2. Dipole Moment: Dipole Moments calculated from VASP (IDIPOL =3, LDIPOL = .TRUE.) for initial and final states. Turning LDIPOL on or off affects the magnitude. Units are eÅ
 3. Polarizability: Refer to Supplemental Section 3 of how to calculate the polarizability of the surface and the adsorbate. The script corrects for the polarizability to calculate only the polarizability change of the adsorbate, not the metal.  Units are eÅ $^2$ V $^-1$
 
