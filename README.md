@@ -11,8 +11,10 @@ All tools will have the attached paper for further readings about the theory,fra
 Our paper in the Journal of Catalysis [can be read here to learn more about the methodology.](https://www.sciencedirect.com/science/article/abs/pii/S0021951724000733) 
 ## Sensitivity analysis of Electrochemical Double Layer (EDL) approximation on electrokinetic predictions: CO* Reduction on Cu
 Our paper in the Journal of Physical Chemistry C [can be read here.](https://doi.org/10.1021/acs.jpcc.4c01457) 
-## Quantifying the Symmetry Factor as a function of the EDL and electronic properties. 
+## Potential-dependent CO* adsorption and its dependence on the EDL properties
 Currently in review at Journal of the American Chemical Society.
+## Quantifying the Symmetry Factor as a function of the EDL and electronic properties
+Currently in review at Angewandte Chemie.
 
 Each section of the repo has a readme.MD to further explain the details of the tools available. 
 
