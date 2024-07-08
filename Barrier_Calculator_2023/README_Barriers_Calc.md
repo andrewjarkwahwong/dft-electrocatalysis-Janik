@@ -84,7 +84,7 @@ The main difference between Barrier_e_d.py and Barrier_EDL_Base.py is the follow
 2) You can now enter a set of dielectric constants and distances as a list (er and d) and easily test the sensitivity of the activation barrier for a given reaction path.
 
 
-### Effects of EDL model on $\Delta$G vs Applied Potential
+### Effects of EDL model on Activation Energies vs Applied Potential
 The first figure regarding compartmentalization of EDL effects on barriers is the same as Barrier_EDL_Base.py.
 Note: If you specify multiple dielectric constants and d, this will plot every single activation energy for each dielectric and d. I recommend either using one er and d or specific the list of values you want based on the stored dictionary. 
 
