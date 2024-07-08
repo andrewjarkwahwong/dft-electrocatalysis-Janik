@@ -12,7 +12,7 @@ Our paper in the Journal of Catalysis [can be read here to learn more about the 
 <img src="Barrier_Calculator_2023\Images\Ga_Stack.png" alt="Image" width="450" height="500"/>
 ## Sensitivity analysis of Electrochemical Double Layer (EDL) approximation on electrokinetic predictions: CO* Reduction on Cu
 Our paper in the Journal of Physical Chemistry C [can be read here.](https://doi.org/10.1021/acs.jpcc.4c01457) 
-<img src="Sensitivity_JPCC_2024\Images\TOC_Final.png" alt="Image" width="600" height="300"/>
+<img src="Sensitivity_JPCC_2024\Images\TOC_Final.png" alt="Image" width="550" height="300"/>
 ## Potential-dependent CO* adsorption and its dependence on the EDL properties
 Currently in review at Journal of the American Chemical Society.
 <img src="CO_Adsorption_EDL_JACS_2024/Figures/Cover.jpg" alt="Image" width="600" height="600"/>
