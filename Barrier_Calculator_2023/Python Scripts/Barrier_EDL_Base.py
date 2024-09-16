@@ -12,8 +12,7 @@ This script will compute three figures:
 @author: Andrew Jark-Wah Wong (Email: ajwongphd@gmail.com)
 """
 
-import PySimpleGUI as sg
-import ipywidgets 
+
 import numpy as np
 import matplotlib.pyplot as plt
 from tabulate import tabulate as tb
